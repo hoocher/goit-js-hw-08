@@ -8,7 +8,7 @@ const messageInputEl = document.querySelector('[name=message]');
 function checkLocalStorage() {
   if (localStorage.getItem('feedback-form-state')) {
     const dataFromLocalStorage = localStorage.getItem('feedback-form-state');
-    parsedData = JSON.parse(dataFromLocalStorage);
+    const parsedData = JSON.parse(dataFromLocalStorage);
     emailInputEl.value = parsedData.email;
     messageInputEl.value = parsedData.message;
   }
