@@ -25,7 +25,8 @@ function inputFunc() {
 
 function submitFunc(event) {
   const dataFromLocalStorage = localStorage.getItem('feedback-form-state');
-  console.log((parsedData = JSON.parse(dataFromLocalStorage)));
+  const parsedData = JSON.parse(dataFromLocalStorage);
+  console.log(parsedData);
   formEl.reset();
   localStorage.removeItem('feedback-form-state');
   event.preventDefault();
